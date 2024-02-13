@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: papayawhip;
+    }
+
+    #login-container {
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #fff;
+    }
+
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      border: none;
+    }
+
+    input {
+      margin-bottom: 10px;
+      padding: 8px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div id="login-container">
+    <h2>Login with</h2>
+    <form id="user-info-form">
+      <input type="text" id="name" placeholder="Your Name">
+      <input type="tel" id="number" placeholder="Your Phone Number">
+      <input type="email" id="email" placeholder="Your Email Address">
+      <button type="submit">Submit</button>
+    </form>
+    <button id="google-btn">Login with Google</button>
+    <button id="facebook-btn">Login with Facebook</button>
+    <button id="hungry-btn">I am hungry</button>
+  </div>
+
+  <script>
+    // Add event listeners for Google, Facebook, and Hungry buttons
+    document.getElementById('google-btn').addEventListener('click', loginWithGoogle);
+    document.getElementById('facebook-btn').addEventListener('click', loginWithFacebook);
+    document.getElementById('hungry-btn').addEventListener('click', iAmHungry);
+
+    // Function to handle Google login
+    function loginWithGoogle() {
+      // You can add your Google authentication logic here
+      alert('Google authentication coming soon!');
+    }
+
+    // Function to handle Facebook login
+    function loginWithFacebook() {
+      // You can add your Facebook authentication logic here
+      alert('Facebook authentication coming soon!');
+    }
+
+    // Function to handle "I am hungry" button
+    function iAmHungry() {
+      // You can add your logic for handling hungry users here
+      alert('Grab a snack and come back!');
+    }
+
+    // Function to handle form submission
+    document.getElementById('user-info-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const number = document.getElementById('number').value;
+      const email = document.getElementById('email').value;
+
+      // You can process the form data here or send it to a server
+      console.log('Name:', name);
+      console.log('Number:', number);
+      console.log('Email:', email);
+    });
+  </script>
+</body>
+</html>
